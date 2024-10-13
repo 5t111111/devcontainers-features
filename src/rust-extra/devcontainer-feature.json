@@ -1,0 +1,21 @@
+{
+    "name": "Rust Extra",
+    "id": "rust-extra",
+    "version": "0.1.0",
+    "description": "A feature to add Rust extra.",
+    // "options": {
+    //     "favorite": {
+    //         "type": "string",
+    //         "enum": [
+    //             "red",
+    //             "gold",
+    //             "green"
+    //         ],
+    //         "default": "red",
+    //         "description": "Choose your favorite color."
+    //     }
+    // },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/rust"
+    ]
+}

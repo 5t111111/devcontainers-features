@@ -1,7 +1,6 @@
 #!/bin/sh
 
-set -euo pipefail
-# set -e
+set -e
 
 echo "========================================================================="
 echo "Installing Rust extra feature"

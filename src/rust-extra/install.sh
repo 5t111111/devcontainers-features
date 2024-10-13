@@ -12,11 +12,13 @@ echo "========================================================================="
 
 # cargo install --force cargo-make
 
-# Create entrypoint
-if [ ! -e "/usr/local/share/rust-extra-entrypoint.sh" ]; then
-    cp -f rust-extra-entrypoint.sh /usr/local/share/
-    chmod +x /usr/local/share/rust-extra-entrypoint.sh
-fi
+# # Create entrypoint
+# if [ ! -e "/usr/local/share/rust-extra-entrypoint.sh" ]; then
+#     cp -f rust-extra-entrypoint.sh /usr/local/share/
+#     chmod +x /usr/local/share/rust-extra-entrypoint.sh
+# fi
+
+
 
 exit 0
 
@@ -38,13 +40,14 @@ if [ "${USERNAME}" = "none" ] || ! id -u "${USERNAME}" > /dev/null 2>&1; then
   USERNAME=root
 fi
 
-if [ -d "$(pwd)/target" ]; then
-  # If it exists, change permissions recursively
-  chmod -R 777 "$(pwd)/target"
-  echo "Permissions for $(pwd)/target have been set to 777."
-else
-  echo "$(pwd)/target does not exist."
-fi
+
+# if [ -d "$(pwd)/target" ]; then
+#   # If it exists, change permissions recursively
+#   chmod -R 777 "$(pwd)/target"
+#   echo "Permissions for $(pwd)/target have been set to 777."
+# else
+#   echo "$(pwd)/target does not exist."
+# fi
 
 # echo "Activating feature 'color'"
 # echo "The provided favorite color is: ${FAVORITE}"

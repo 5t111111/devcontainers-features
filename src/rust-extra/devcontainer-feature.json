@@ -1,7 +1,7 @@
 {
     "name": "Rust Extra",
     "id": "rust-extra",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "A feature to add Rust extra.",
     // "options": {
     //     "favorite": {
@@ -19,5 +19,6 @@
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers/features/rust"
     ],
-    "entrypoint": "/usr/local/share/rust-extra-entrypoint.sh"
+    "onCreateCommand": "sudo bash -c 'chown -R $SUDO_USER:$SUDO_USER ${containerWorkspaceFolder}'"
+    // "entrypoint": "/usr/local/share/rust-extra-entrypoint.sh"
 }

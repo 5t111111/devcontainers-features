@@ -1,25 +1,15 @@
 {
-    "name": "Rust Extra",
-    "id": "rust-extra",
-    "version": "0.1.7",
-    "description": "A feature to add Rust extra.",
-    // "options": {
-    //     "favorite": {
-    //         "type": "string",
-    //         "enum": [
-    //             "red",
-    //             "gold",
-    //             "green"
-    //         ],
-    //         "default": "red",
-    //         "description": "Choose your favorite color."
-    //     }
-    // },
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils",
-        "ghcr.io/devcontainers/features/rust"
-    ],
-    "onCreateCommand": "sudo bash -c 'chown -R $SUDO_USER:$SUDO_USER ${containerWorkspaceFolder}'",
-    // "entrypoint": "/usr/local/share/rust-extra-entrypoint.sh"
-    "entrypoint": "sleep infinity"
+  "name": "Rust Extra Feature",
+  "id": "rust-extra",
+  "version": "0.1.8",
+  "description": "This feature enhances the developer experience by adding some missing configurations to the Rust feature maintained by the Dev Container Spec Maintainers.",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainers/features/rust"
+  ],
+  "onCreateCommand": "sudo bash -c 'chown -R $SUDO_USER:$SUDO_USER ${containerWorkspaceFolder}'",
+  "entrypoint": "sleep infinity",
+  "containerEnv": {
+    "CARGO_TARGET_DIR": "${containerWorkspaceFolder}/target"
+  }
 }

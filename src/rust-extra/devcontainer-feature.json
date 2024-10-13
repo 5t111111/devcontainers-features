@@ -1,26 +1,26 @@
 {
-  "id": "rust-extra",
-  "version": "0.1.13",
-  "name": "Rust Extra Feature",
-  "documentationURL": "https://github.com/5t111111/devcontainers-features/tree/main/src/rust-extra",
-  "description": "This feature enhances the developer experience by adding some missing configurations to the Rust feature maintained by the Dev Container Spec Maintainers.",
-  "installsAfter": [
-    "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/devcontainers/features/rust"
-  ],
-  "onCreateCommand": "sudo bash -c 'chown -R $SUDO_USER:$SUDO_USER ${containerWorkspaceFolder}'",
-  "entrypoint": "sleep infinity",
-  "customizations": {
-    "vscode": {
-      "settings": {
-        "[rust]": {
-          "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    "id": "rust-extra",
+    "version": "0.1.14",
+    "name": "Rust Extra Feature",
+    "documentationURL": "https://github.com/5t111111/devcontainers-features/tree/main/src/rust-extra",
+    "description": "This feature enhances the developer experience by adding some missing configurations to the Rust feature.",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/rust"
+    ],
+    "onCreateCommand": "sudo bash -c 'chown -R $SUDO_USER:$SUDO_USER ${containerWorkspaceFolder}'",
+    "entrypoint": "sleep infinity",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "[rust]": {
+                    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+                }
+            },
+            "extensions": [
+                "swellaby.vscode-rust-test-adapter",
+                "fill-labs.dependi"
+            ]
         }
-      },
-      "extensions": [
-        "swellaby.vscode-rust-test-adapter",
-        "fill-labs.dependi"
-      ]
     }
-  }
 }

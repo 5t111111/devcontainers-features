@@ -28,9 +28,13 @@ This feature installs the following Rust binary tools:
 This feature fixes permission issues especially when running the `cargo` command
 by a non-root user or using in-container volumes.
 
-It sets the `CARGO_TARGET_DIR` environment variable to
-`${containerWorkspaceFolder}/target` and changes the owner of the workspace
-directory to the appropriate remote user specified in your `devcontainer.json`.
+It changes the owner of the workspace directory to the appropriate remote user
+specified in your `devcontainer.json`.
+
+A point to note is that this permission setting assumes that the build target
+directory is located within the workspace path. In other words, if the target
+directory is outside of the workspace, such as when configured via
+`CARGO_TARGET_DIR`, it will not function as expected.
 
 ## OS Support
 

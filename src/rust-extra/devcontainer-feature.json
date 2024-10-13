@@ -1,6 +1,6 @@
 {
   "id": "rust-extra",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "name": "Rust Extra Feature",
   "documentationURL": "https://github.com/5t111111/devcontainers-features/tree/main/src/rust-extra",
   "description": "This feature enhances the developer experience by adding some missing configurations to the Rust feature maintained by the Dev Container Spec Maintainers.",
@@ -13,7 +13,6 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "lldb.executable": "/usr/bin/lldb",
         "[rust]": {
           "editor.defaultFormatter": "rust-lang.rust-analyzer"
         }

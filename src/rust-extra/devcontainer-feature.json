@@ -1,7 +1,7 @@
 {
     "name": "Rust Extra",
     "id": "rust-extra",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "A feature to add Rust extra.",
     // "options": {
     //     "favorite": {
@@ -18,5 +18,6 @@
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers/features/rust"
-    ]
+    ],
+    "entrypoint": "/usr/local/share/rust-extra-entrypoint.sh"
 }

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 set -e
 
@@ -11,6 +11,14 @@ env
 echo "========================================================================="
 
 # cargo install --force cargo-make
+
+# Create entrypoint
+if [ ! -e "/usr/local/share/rust-extra-entrypoint.sh" ]; then
+    cp -f rust-extra-entrypoint.sh /usr/local/share/
+    chmod +x /usr/local/share/rust-extra-entrypoint.sh
+fi
+
+exit 0
 
 echo "-------------------------------------------------------------------------"
 cat /etc/passwd

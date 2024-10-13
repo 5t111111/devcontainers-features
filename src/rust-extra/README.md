@@ -1,7 +1,7 @@
 
 # Rust Extra Feature (rust-extra)
 
-This feature enhances the developer experience by adding some missing configurations to the Rust feature maintained by the Dev Container Spec Maintainers.
+This feature enhances the developer experience by adding some missing configurations to the Rust feature.
 
 ## Example Usage
 
@@ -12,6 +12,13 @@ This feature enhances the developer experience by adding some missing configurat
 ```
 
 
+
+## Customizations
+
+### VS Code Extensions
+
+- `swellaby.vscode-rust-test-adapter`
+- `fill-labs.dependi`
 
 ## Feature Dependencies
 
@@ -36,7 +43,11 @@ feature for user management.
 
 This feature installs the following Rust binary tools:
 
-- `cargo-make`
+- cargo-binstall
+- cargo-audit
+- cargo-edit
+- cargo-expand
+- cargo-watch
 
 ### Fix permission issues
 

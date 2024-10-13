@@ -21,7 +21,11 @@ feature for user management.
 
 This feature installs the following Rust binary tools:
 
-- `cargo-make`
+- cargo-binstall
+- cargo-audit
+- cargo-edit
+- cargo-expand
+- cargo-watch
 
 ### Fix permission issues
 

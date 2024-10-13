@@ -1,5 +1,7 @@
 #!/bin/sh
-set -e
+
+set -euo pipefail
+# set -e
 
 echo "========================================================================="
 echo "Installing Rust extra feature"
@@ -8,6 +10,10 @@ pwd
 echo "========================================================================="
 env
 echo "========================================================================="
+
+cargo install --force cargo-make
+
+
 
 # echo "Activating feature 'color'"
 # echo "The provided favorite color is: ${FAVORITE}"

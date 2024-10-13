@@ -10,9 +10,23 @@ echo "========================================================================="
 env
 echo "========================================================================="
 
-cargo install --force cargo-make
+# cargo install --force cargo-make
 
+chown -R rust:rust /workspaces/rust-devcontainer-template/target
 
+USERNAME="${USERNAME:-"none"}"
+
+if [ "${USERNAME}" = "none" ] || ! id -u "${USERNAME}" > /dev/null 2>&1; then
+  USERNAME=root
+fi
+
+if [ -d "$(pwd)/target" ]; then
+  # If it exists, change permissions recursively
+  chmod -R 777 "$(pwd)/target"
+  echo "Permissions for $(pwd)/target have been set to 777."
+else
+  echo "$(pwd)/target does not exist."
+fi
 
 # echo "Activating feature 'color'"
 # echo "The provided favorite color is: ${FAVORITE}"

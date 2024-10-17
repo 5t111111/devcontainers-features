@@ -8,7 +8,7 @@
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers/features/rust"
     ],
-    "onCreateCommand": "sudo bash -c 'chown -R $SUDO_USER:$SUDO_USER ${containerWorkspaceFolder}'",
+    "onCreateCommand": "sudo bash -c 'chown -R $SUDO_USER:$SUDO_USER ${containerWorkspaceFolder} | true'",
     "entrypoint": "sleep infinity",
     "customizations": {
         "vscode": {
